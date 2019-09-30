@@ -1,0 +1,22 @@
+type Query {
+  chart(user: UserInfo): String!
+}
+
+type NatalChart {
+  weight: String!
+  answerText: String!
+  rezult: Int
+}
+
+input UserInfo {
+  gmt: String!
+  date: String!
+  time: String!
+  city: String!
+  coordinates: Coordinates
+}
+
+input Coordinates {
+  latitude: String!
+  longitude: String!
+}
