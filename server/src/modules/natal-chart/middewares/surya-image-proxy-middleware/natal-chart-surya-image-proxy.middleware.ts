@@ -5,7 +5,7 @@ import { ConfigService } from '../../../../config/services/config.service';
 
 @Injectable()
 export class NatalChartSuryaImageProxyMiddleware implements NestMiddleware {
-  constructor(private readonly configService: ConfigService) {}
+  constructor(private readonly configService?: ConfigService) {}
 
   use(req: any, res: any, next: () => void) {
     return proxy({

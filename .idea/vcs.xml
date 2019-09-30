@@ -2,7 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/client" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/grahas-grapqh-server" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/grahas_v2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/server" vcs="Git" />
   </component>
 </project>
