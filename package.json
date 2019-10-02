@@ -1,0 +1,33 @@
+{
+  "name": "grahas_v3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm run build",
+    "start": "npm run --prefix server start:prod",
+    "start:dev:server": "npm run --prefix server start:dev",
+    "start:dev:client": "npm run --prefix client start",
+    "start:dev": "npm-run-all -p start:dev:server start:dev:client",
+    "prebuild:server": "npm install --prefix server",
+    "prebuild:client": "npm install --prefix client",
+    "build:server": "npm run --prefix server build",
+    "build:client": "npm run --prefix client build",
+    "build": "npm-run-all -p build:server build:client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlegLustenko/grahas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OlegLustenko/grahas/issues"
+  },
+  "homepage": "https://github.com/OlegLustenko/grahas#readme",
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

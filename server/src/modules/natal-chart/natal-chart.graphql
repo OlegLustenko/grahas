@@ -1,5 +1,5 @@
 type Query {
-  chart(user: UserInfo): String!
+  chart(user: UserInfoInput): String!
 }
 
 type NatalChart {
@@ -8,7 +8,7 @@ type NatalChart {
   rezult: Int
 }
 
-input UserInfo {
+type UserInfo {
   gmt: String!
   date: String!
   time: String!
@@ -16,7 +16,20 @@ input UserInfo {
   coordinates: Coordinates
 }
 
-input Coordinates {
+type Coordinates {
+  latitude: String!
+  longitude: String!
+}
+
+input UserInfoInput {
+  gmt: String!
+  date: String!
+  time: String!
+  city: String!
+  coordinates: CoordinatesInput
+}
+
+input CoordinatesInput {
   latitude: String!
   longitude: String!
 }

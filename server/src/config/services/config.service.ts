@@ -14,4 +14,8 @@ export class ConfigService {
   get(key: string): string {
     return this.envConfig[key];
   }
+
+  getPort() {
+    return process.env.PORT || 8080
+  }
 }

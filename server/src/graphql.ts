@@ -5,17 +5,22 @@
  */
 
 /* tslint:disable */
-export class Coordinates {
+export class CoordinatesInput {
     latitude: string;
     longitude: string;
 }
 
-export class UserInfo {
+export class UserInfoInput {
     gmt: string;
     date: string;
     time: string;
     city: string;
-    coordinates?: Coordinates;
+    coordinates?: CoordinatesInput;
+}
+
+export class Coordinates {
+    latitude: string;
+    longitude: string;
 }
 
 export class NatalChart {
@@ -25,5 +30,13 @@ export class NatalChart {
 }
 
 export abstract class IQuery {
-    abstract chart(user?: UserInfo): string | Promise<string>;
+    abstract chart(user?: UserInfoInput): string | Promise<string>;
+}
+
+export class UserInfo {
+    gmt: string;
+    date: string;
+    time: string;
+    city: string;
+    coordinates?: Coordinates;
 }
