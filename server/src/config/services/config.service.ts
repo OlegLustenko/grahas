@@ -7,8 +7,8 @@ export class ConfigService {
   private readonly envConfig: { [key: string]: string };
 
   constructor(filePath: string) {
-    console.log(filePath);
-    this.envConfig = dotenv.parse(fs.readFileSync(filePath))
+    console.log(dotenv.config().parsed);
+    this.envConfig = dotenv.config().parsed;
   }
 
   get(key: string): string {
@@ -16,6 +16,6 @@ export class ConfigService {
   }
 
   getPort() {
-    return process.env.PORT || 8080
+    return process.env.PORT || 8080;
   }
 }

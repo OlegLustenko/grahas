@@ -9,15 +9,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prestart": "npm run build",
-    "start": "npm run --prefix server start:prod",
+    "start": "npm run --prefix server start:azure",
     "start:dev:server": "npm run --prefix server start:dev",
     "start:dev:client": "npm run --prefix client start",
     "start:dev": "npm-run-all -p start:dev:server start:dev:client",
+    "start:local:prod": "npm install -g azure-functions-core-tools",
     "prebuild:server": "npm install --prefix server",
     "prebuild:client": "npm install --prefix client",
     "build:server": "npm run --prefix server build",
     "build:client": "npm run --prefix client build",
-    "build": "npm-run-all -p build:server build:client"
+    "build": "npm-run-all -p build:server build:client",
+    "deploy": "run-s build now"
   },
   "repository": {
     "type": "git",

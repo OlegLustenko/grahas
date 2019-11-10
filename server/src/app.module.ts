@@ -12,10 +12,11 @@ import { NatalChartModule } from './modules/natal-chart/natal-chart.module';
 import { ConfigModule } from './config/config.module';
 import { ImagesModule } from './modules/images/images.module';
 
+
 @Module({
   imports: [
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '../..', 'client/build'),
+      rootPath: join(__dirname, '../../..', 'client/build'),
     }),
     NatalChartModule,
     ConfigModule,

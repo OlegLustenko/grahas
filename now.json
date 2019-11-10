@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "name": "nestjs-now",
+  "env": {
+    "USER_ID": "@user_id",
+    "USER_NAME": "@user_name",
+    "JYOTISH_PROXY": "@jyotish_proxy"
+  },
+  "builds": [
+    {
+      "src": "server/dist/main.js",
+      "use": "@now/node",
+      "config": {
+        "maxLambdaSize": "50mb"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server/dist/main.js"
+    }
+  ]
+}
