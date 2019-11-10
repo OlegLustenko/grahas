@@ -8,7 +8,7 @@
   },
   "builds": [
     {
-      "src": "server/dist/main.js",
+      "src": "./server/dist/src/main.js",
       "use": "@now/node",
       "config": {
         "maxLambdaSize": "50mb"
@@ -18,7 +18,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "server/dist/main.js"
+      "dest": "./server/dist/src/main.js"
     }
   ]
 }
